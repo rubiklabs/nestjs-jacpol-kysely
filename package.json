@@ -1,27 +1,54 @@
 {
   "name": "@rubiklabs/nestjs-jacpol-kysely",
-  "version": "0.1.0",
-  "description": "Kysely adapter for @rubiklabs/nestjs-jacpol",
+  "version": "1.0.0",
+  "description": "Kysely adapter for @rubiklabs/nestjs-jacpol – store ABAC policies in PostgreSQL, MySQL or SQLite",
+  "license": "MIT",
+  "author": "Halil Safa Sağlık <safa@rubiklabs.com> (https://github.com/ogeday26)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubiklabs/nestjs-jacpol-kysely"
+  },
+  "homepage": "https://github.com/rubiklabs/nestjs-jacpol-kysely#readme",
+  "bugs": {
+    "url": "https://github.com/rubiklabs/nestjs-jacpol-kysely/issues"
+  },
+  "keywords": [
+    "nestjs",
+    "kysely",
+    "jacpol",
+    "abac",
+    "policy",
+    "authorization",
+    "access-control",
+    "sql",
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "peerDependencies": {
-    "@rubiklabs/nestjs-jacpol": "*",
-    "kysely": "^0.27.0",
-    "@nestjs/common": "^10.0.0"
+    "@rubiklabs/nestjs-jacpol": "^1.0.1",
+    "kysely": "^0.28.14",
+    "@nestjs/common": "^11.1.17"
   },
   "devDependencies": {
-    "@rubiklabs/nestjs-jacpol": "*",
-    "@types/jest": "^29.0.0",
-    "@types/node": "^20.0.0",
-    "jest": "^29.0.0",
-    "ts-jest": "^29.0.0",
-    "typescript": "^5.0.0",
-    "kysely": "^0.27.0"
+    "@rubiklabs/nestjs-jacpol": "^1.0.1",
+    "@nestjs/common": "^11.1.17",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
+    "jest": "^30.3.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3",
+    "kysely": "^0.28.14"
   }
 }
